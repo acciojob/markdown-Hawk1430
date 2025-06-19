@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.app {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.editor-container {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.textarea {
+  width: 50%;
+  height: 80vh;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.preview {
+  width: 50%;
+  height: 80vh;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  resize: none;
+  white-space: pre-wrap;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: gray;
+  text-align: center;
+  margin-bottom: 10px;
+}
