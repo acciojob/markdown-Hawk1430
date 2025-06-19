@@ -22,10 +22,10 @@ const MarkdownEditor = () => {
           onChange={handleChange}
           placeholder="Enter Markdown here..."
         />
-        <p
+        <h1
           className="preview"
           
-        >{preview}</p>
+        >{preview}</h1>
       </div>
     </>
   );
