@@ -6,7 +6,7 @@ const MarkdownEditor = () => {
   const [preview, setPreview] = useState('');
 
   useEffect(() => {
-    const html = marked.parse(markdown); // Convert markdown to HTML
+    const html = marked.parse(markdown);
     setPreview(html);
   }, [markdown]);
 
@@ -26,7 +26,7 @@ const MarkdownEditor = () => {
         />
         <div
           className="preview"
-          dangerouslySetInnerHTML={{ __html: preview }} // Render as HTML
+          dangerouslySetInnerHTML={{ __html: preview }}
         />
       </div>
     </>
