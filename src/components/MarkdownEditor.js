@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { marked } from 'marked';
 
 const MarkdownEditor = () => {
   const [markdown, setMarkdown] = useState('');
   const [preview, setPreview] = useState('');
 
   useEffect(() => {
-    setPreview(markdown);
+    const html = marked.parse(markdown); // Convert markdown to HTML
+    setPreview(html);
   }, [markdown]);
 
   const handleChange = (e) => {
@@ -22,10 +24,10 @@ const MarkdownEditor = () => {
           onChange={handleChange}
           placeholder="Enter Markdown here..."
         />
-        <h1
+        <div
           className="preview"
-          
-        >{preview}</h1>
+          dangerouslySetInnerHTML={{ __html: preview }} // Render as HTML
+        />
       </div>
     </>
   );
